@@ -3,7 +3,8 @@ import { A0PopupComponent } from '../a0-popup/a0-popup.component';
 
 interface Menu {
   id: string,
-  name: string;
+  name: string,
+  items: string[]
 };
 
 @Component({
@@ -18,29 +19,52 @@ export class A0TopBarComponent implements OnInit {
   aMenus: Menu[] = [
     {
       id: 'menuFile',
-      name: 'File'
+      name: 'File',
+      items: [
+        'New...',
+        'Open...',
+        'Save',
+        'Save As...'
+      ]
     },
     {
       id: 'menuEdit',
-      name: 'Edit'
+      name: 'Edit',
+      items: [
+        'Undo',
+        'Redo',
+        'Cut',
+        'Copy',
+        'Paste'
+      ]
     },
     {
       id: 'menuView',
-      name: 'View'
+      name: 'View',
+      items: [
+        'Split'
+      ]
     },
     {
       id: 'menuTools',
-      name: 'Tools'
+      name: 'Tools',
+      items: [
+        'Preferences'
+      ]
     },
     {
       id: 'menuHelp',
-      name: 'Help'
+      name: 'Help',
+      items: [
+        'About...'
+      ]
     }
   ];
 
   NULL_MENU: Menu = {
     id: 'null',
-    name: ''
+    name: '',
+    items: []
   };
 
   currentMenu: Menu = this.NULL_MENU;

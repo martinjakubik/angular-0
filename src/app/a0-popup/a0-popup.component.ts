@@ -1,4 +1,4 @@
-import { Component, Injectable, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-a0-popup',
@@ -8,7 +8,7 @@ import { Component, Injectable, OnInit } from '@angular/core';
 export class A0PopupComponent implements OnInit {
 
   id: string;
-  items: string[];
+  @Input() items: string[];
 
   constructor() {
     this.id = '';
