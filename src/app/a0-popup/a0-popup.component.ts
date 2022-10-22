@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class A0PopupComponent implements OnInit {
 
-  constructor() { }
+  visible: boolean;
+  items: string[];
+
+  constructor() {
+    this.visible = false;
+    this.items = ['blank'];
+   }
 
   ngOnInit(): void {
   }
