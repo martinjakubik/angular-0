@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { A0PopupComponent } from '../a0-popup/a0-popup.component';
 
 interface Menu {
+  id: string,
   name: string;
 };
 
@@ -16,18 +17,23 @@ export class A0TopBarComponent implements OnInit {
 
   aMenus: Menu[] = [
     {
+      id: 'menuFile',
       name: 'File'
     },
     {
+      id: 'menuEdit',
       name: 'Edit'
     },
     {
+      id: 'menuView',
       name: 'View'
     },
     {
+      id: 'menuTools',
       name: 'Tools'
     },
     {
+      id: 'menuHelp',
       name: 'Help'
     }
   ];
