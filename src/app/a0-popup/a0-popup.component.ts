@@ -17,5 +17,4 @@ export class A0PopupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
