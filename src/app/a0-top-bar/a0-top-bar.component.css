@@ -1,0 +1,13 @@
+.topBar {
+    display: flex;
+}
+
+.topBarMenuItem {
+    flex-basis: 100px;
+    padding: 2px 8px 2px 8px;
+}
+
+.topBarMenuItem:hover {
+    background-color: rgb(224, 224, 224);
+    cursor: default;
+}
