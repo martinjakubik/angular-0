@@ -1,4 +1,4 @@
 <div class="topBar">
     <div *ngFor="let menu of aMenus" class="topBarMenuItem" (click)="toggleMenu(menu)">{{menu.name}}</div>
-    <app-a0-popup *ngFor="let menu of aMenus" id="{{menu.id}}"></app-a0-popup>
+    <app-a0-popup *ngFor="let popup of popups" id="{{popup.id}}"></app-a0-popup>
 </div>
