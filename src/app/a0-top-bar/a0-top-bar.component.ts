@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { A0PopupComponent } from '../a0-popup/a0-popup.component';
 
 interface Menu {
   name: string;
