@@ -38,23 +38,22 @@ export class A0TopBarComponent implements OnInit {
     }
   ];
 
-  popups:A0PopupComponent[] = [];
+  NULL_MENU: Menu = {
+    id: 'null',
+    name: ''
+  };
+
+  currentMenu: Menu = this.NULL_MENU;
 
   ngOnInit(): void {
-    this.aMenus.forEach(menu => {
-      const popup = new A0PopupComponent();
-      popup.setId(menu.id);
-      this.popups.push(popup);
-    });
   }
 
-  toggleMenu(oMenu: Menu): void {
-    const oPopup = this.popups.find((popup) => {
-      return popup.id === oMenu.id;
-    });
-    if (oPopup) {
-      console.log(`setting ${oMenu.name} visible = ${!oPopup.visible}`);
-      oPopup.visible = !oPopup.visible;
+  toggleMenu(menu: Menu): void {
+    console.log(`toggling menu ${menu.name}`);
+    if (this.currentMenu === menu) {
+      this.currentMenu = this.NULL_MENU;
+    } else {
+      this.currentMenu = menu;
     }
   }
 }
