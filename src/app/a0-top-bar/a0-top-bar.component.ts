@@ -49,7 +49,6 @@ export class A0TopBarComponent implements OnInit {
   }
 
   toggleMenu(menu: Menu): void {
-    console.log(`toggling menu ${menu.name}`);
     if (this.currentMenu === menu) {
       this.currentMenu = this.NULL_MENU;
     } else {
