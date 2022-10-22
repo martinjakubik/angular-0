@@ -17,8 +17,4 @@ export class A0PopupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  setId(id:string) {
-    this.id = id;
-  }
 }
