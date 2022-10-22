@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Menu {
+  name: string;
+};
+
 @Component({
   selector: 'app-a0-top-bar',
   templateUrl: './a0-top-bar.component.html',
@@ -9,7 +13,7 @@ export class A0TopBarComponent implements OnInit {
 
   constructor() { }
 
-  aMenus = [
+  aMenus: Menu[] = [
     {
       name: 'File'
     },
@@ -30,4 +34,7 @@ export class A0TopBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showMenu(oMenu: { name: any; }): void {
+    console.log(oMenu.name);
+  }
 }

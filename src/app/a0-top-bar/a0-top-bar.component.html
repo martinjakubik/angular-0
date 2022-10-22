@@ -1,3 +1,3 @@
 <div class="topBar">
-    <div class="topBarMenuItem" *ngFor="let menu of aMenus">{{menu.name}}</div>
+    <div class="topBarMenuItem" *ngFor="let menu of aMenus" (click)="showMenu(menu)">{{menu.name}}</div>
 </div>
