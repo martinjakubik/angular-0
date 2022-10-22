@@ -41,7 +41,7 @@ export class A0TopBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showMenu(oMenu: { name: any; }): void {
+  toggleMenu(oMenu: { name: any; }): void {
     console.log(oMenu.name);
   }
 }
