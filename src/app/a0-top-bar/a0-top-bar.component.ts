@@ -53,8 +53,8 @@ export class A0TopBarComponent implements OnInit {
       return popup.id === oMenu.id;
     });
     if (oPopup) {
-      console.log(`setting ${oMenu.name} visible`);
-      oPopup.visible = true 
+      console.log(`setting ${oMenu.name} visible = ${!oPopup.visible}`);
+      oPopup.visible = !oPopup.visible;
     }
   }
 }
